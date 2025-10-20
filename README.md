@@ -135,18 +135,19 @@ Respuesta: JSON actualizado. Evento publicado en Kafka orders.events.
 ## Postman Collection
 Importa esta colección JSON (link-a-tu-collection.postman.json) para tests rápidos (incluye variables para baseUrl y orderId). 
 ### Testing
-Cobertura: >80% (unitarios con Mockito, integración con Testcontainers para Mongo/Redis/Kafka).
-Ejecutar: mvn test (o específicos: -Dtest=OrderControllerTest).
+- Cobertura: >80% (unitarios con Mockito, integración con Testcontainers para Mongo/Redis/Kafka).
+- Ejecutar: mvn test (o específicos: -Dtest=OrderControllerTest).
 
 ### Notas de Desarrollo
-Cloud: Configs para Atlas (Mongo), Redis Cloud, Confluent (Kafka) en .env.
-Seguridad: No commitees .env; usa .env.example como template.
-Commits: Usa Conventional Commits (feat:, fix:, chore:).
-Deploy: Listo para Kubernetes (Dockerfile incluido); agrega CI/CD con GitHub Actions.
+- Cloud: Configs para Atlas (Mongo), Redis Cloud, Confluent (Kafka) en .env.
+- Seguridad: No commitees .env; usa .env.example como template.
+- Commits: Usa Conventional Commits (feat:, fix:, chore:).
+- Deploy: Listo para Kubernetes (Dockerfile incluido); agrega CI/CD con GitHub Actions.
 
-### ContribucionesFork > Branch > PR con descripción clara. 
+### Contribuciones
+Fork > Branch > PR con descripción clara. 
 ### Licencia
-MIT License – ver LICENSE.¡Gracias por revisar! Si necesitas ajustes, abre issue.
+MIT License – ver LICENSE.
 
 ¡Gracias por revisar!
 
