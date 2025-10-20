@@ -135,7 +135,7 @@ Respuesta: JSON actualizado. Evento publicado en Kafka orders.events.
 ## Postman Collection
 Importa esta colección JSON (link-a-tu-collection.postman.json) para tests rápidos (incluye variables para baseUrl y orderId). 
 ### Testing
-- Cobertura: >80% (unitarios con Mockito, integración con Testcontainers para Mongo/Redis/Kafka).
+- Cobertura: >80% (unitarios para Mongo/Redis/Kafka).
 - Ejecutar: mvn test (o específicos: -Dtest=OrderControllerTest).
 
 ### Notas de Desarrollo
