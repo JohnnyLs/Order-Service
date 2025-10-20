@@ -1,6 +1,7 @@
 package com.example.orderservice.controller;
 
 import com.example.orderservice.dto.CreateOrderDto;
+import com.example.orderservice.dto.ItemDto;
 import com.example.orderservice.dto.OrderResponseDto;
 import com.example.orderservice.service.OrderService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -34,7 +35,12 @@ class OrderControllerTest {
     void create_Success() throws Exception {
         CreateOrderDto dto = new CreateOrderDto();
         dto.setCustomerId("123");
-        dto.setItems(List.of());
+        ItemDto item = new ItemDto();
+        item.setSku("SKU1");
+        item.setQuantity(1);
+        item.setPrice(10.0);
+        dto.setItems(List.of(item));
+
 
         OrderResponseDto response = new OrderResponseDto();
         response.setId("test-id");

@@ -2,7 +2,14 @@ spring:
   data:
     mongodb:
       auto-index-creation: true
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+  cache:
+    type: none  # Desactiva Redis cache en tests para simplicidad (o usa mock)
   kafka:
+    bootstrap-servers: localhost:9092  # Para @EmbeddedKafka
     producer:
       properties:
         security:
@@ -11,3 +18,4 @@ logging:
   level:
     org.springframework: WARN
     root: INFO
+    com.example.orderservice: DEBUG

@@ -1,6 +1,7 @@
 package com.example.orderservice.service;
 
 import com.example.orderservice.dto.CreateOrderDto;
+import com.example.orderservice.dto.ItemDto;
 import com.example.orderservice.dto.OrderResponseDto;
 import com.example.orderservice.dto.UpdateStatusDto;
 import com.example.orderservice.entity.Order;
@@ -46,13 +47,21 @@ class OrderServiceTest {
     void setUp() {
         createDto = new CreateOrderDto();
         createDto.setCustomerId("123");
-        createDto.setItems(List.of(new com.example.orderservice.dto.ItemDto("SKU1", 1, 10.0)));
+        ItemDto item = new ItemDto();
+        item.setSku("SKU1");
+        item.setQuantity(1);
+        item.setPrice(10.0);
+        createDto.setItems(List.of(item));
 
         order = new Order();
         order.setId("test-id");
         order.setCustomerId("123");
         order.setStatus("NEW");
-        order.setItems(List.of(new com.example.orderservice.entity.Item("SKU1", 1, 10.0)));
+        Order.Item orderItem = new Order.Item();
+        orderItem.setSku("SKU1");
+        orderItem.setQuantity(1);
+        orderItem.setPrice(10.0);
+        order.setItems(List.of(orderItem));
         order.setCreatedAt(LocalDateTime.now());
         order.setUpdatedAt(LocalDateTime.now());
     }
