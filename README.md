@@ -147,7 +147,7 @@ Importa esta colección JSON (link-a-tu-collection.postman.json) para tests ráp
 ### Contribuciones
 Fork > Branch > PR con descripción clara. 
 ### Licencia
-MIT License – ver LICENSE.¡Gracias por revisar! Si necesitas ajustes, abre issue.
+MIT License – ver LICENSE.
 
 ¡Gracias por revisar!
 
