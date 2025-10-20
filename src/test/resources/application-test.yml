@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      auto-index-creation: true
+  kafka:
+    producer:
+      properties:
+        security:
+          protocol: PLAINTEXT
+logging:
+  level:
+    org.springframework: WARN
+    root: INFO
