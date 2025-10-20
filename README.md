@@ -57,7 +57,6 @@ Bonus Implementados:Endpoint /orders/health (valida conexiones Mongo/Redis/Kafka
 ## Requisitos
 - Java 21+.
 - Maven 3.9+.
-- Docker & Docker Compose (para MongoDB/Redis/Kafka locales).
 - Opcional: MongoDB Atlas, Redis Cloud, Confluent Cloud (cloud configs en .env).
 ## Ejecución Local
 Clona el Repo:
@@ -76,10 +75,6 @@ KAFKA_BOOTSTRAP_SERVERS=
 KAFKA_TOPIC=orders.events
 SERVER_PORT=
 LOGGING_LEVEL_COM_EXAMPLE=DEBUG
-
-Inicia Servicios (Docker):
-
-docker-compose up -d  # Levanta MongoDB, Redis, Kafka (KRaft mode)
 
 Build y Run:
 
